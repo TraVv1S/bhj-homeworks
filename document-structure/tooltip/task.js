@@ -24,9 +24,9 @@ hasTooltip.forEach(el => {
             let tooltip = document.createElement('div');
             tooltip.classList.add('tooltip');
             tooltip.innerText = tip;
-            tooltip.style.top = coords.top + coords.height + 'px';
-            tooltip.style.left = coords.left + 'px';
-            tooltip.style.display = "block";
+            tooltip.style.top = coords.top + coords.height + window.pageYOffset + 'px';
+            tooltip.style.left = coords.left + window.pageXOffset + 'px';
+            tooltip.style.display = "block";            
 
             el.after(tooltip);
         }
